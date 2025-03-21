@@ -6,8 +6,8 @@ list_food = [
 
 function calculateShoppingBudget(list_food) {
   let sum = 0;
-  for (let i = 0; i < list.length; i++) {
-    sum += list[i][0] * list[i][1];
+  for (let i = 0; i < list_food.length; i++) {
+    sum += list_food[i][0] * list_food[i][1];
   }
   return sum;
 }
@@ -29,12 +29,10 @@ function snail(matrix) {
   let is_continue = true;
 
   while (is_continue) {
-    // shift() dùng để lấy hàng / giá trị đầu
     let temp = matrix.shift();
     list = list.concat(temp);
 
     for (let i = 0; i < matrix.length; i++) {
-      // shift() dùng để lấy hàng / giá trị cuối cùng
       let temp = matrix[i].pop();
       if (temp !== undefined) {
         list.push(temp);
@@ -43,12 +41,10 @@ function snail(matrix) {
 
     if (matrix.length > 0) {
       let temp = matrix.pop();
-      // reverse() dùng để đảo ngược giá trị
       list = list.concat(temp.reverse());
     }
 
     for (let i = matrix.length - 1; i >= 0; i--) {
-      // Lấy cột / những giá trị đầu từ dưới lên trên
       let temp = matrix[i].shift();
       if (temp !== undefined) {
         list.push(temp);
@@ -64,4 +60,3 @@ function snail(matrix) {
 }
 
 console.log(snail(list_matrix));
-// Kết quả: [1, 2, 3, 6, 9, 8, 7, 4, 5]
