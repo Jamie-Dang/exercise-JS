@@ -29,25 +29,25 @@ function snail(matrix) {
   let is_continue = true;
 
   while (is_continue) {
-    let temp = matrix.shift();
-    list = list.concat(temp);
+    const topRow = matrix.shift();
+    list = list.concat(topRow);
 
     for (let i = 0; i < matrix.length; i++) {
-      let temp = matrix[i].pop();
-      if (temp !== undefined) {
-        list.push(temp);
+      const rightColumn = matrix[i].pop();
+      if (rightColumn !== undefined) {
+        list.push(rightColumn);
       }
     }
 
     if (matrix.length > 0) {
-      let temp = matrix.pop();
-      list = list.concat(temp.reverse());
+      const bottomRow = matrix.pop();
+      list = list.concat(bottomRow.reverse());
     }
 
     for (let i = matrix.length - 1; i >= 0; i--) {
-      let temp = matrix[i].shift();
-      if (temp !== undefined) {
-        list.push(temp);
+      const leftColumn = matrix[i].shift();
+      if (leftColumn !== undefined) {
+        list.push(leftColumn);
       }
     }
 
