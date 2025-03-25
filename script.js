@@ -1,30 +1,28 @@
 // Exercise 1
-list_food = [
+listFood = [
   [5, 2],
   [10, 4],
 ];
 
-function calculateShoppingBudget(list_food) {
+function calculateShoppingBudget(listFood) {
   let sum = 0;
-  for (let i = 0; i < list_food.length; i++) {
-    sum += list_food[i][0] * list_food[i][1];
+  for (let i = 0; i < listFood.length; i++) {
+    sum += listFood[i][0] * listFood[i][1];
   }
   return sum;
 }
 console.log(
-  `Calculate Shopping Budget of the list = ${calculateShoppingBudget(
-    list_food
-  )}`
+  `Calculate Shopping Budget of the list = ${calculateShoppingBudget(listFood)}`
 );
 
 // Exercise 2
 
-const list_matrix = [
+const listMatrix = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
 ];
-function snail(matrix) {
+function listSnail(matrix) {
   let list = [];
   let is_continue = true;
 
@@ -59,4 +57,4 @@ function snail(matrix) {
   return list;
 }
 
-console.log(snail(list_matrix));
+console.log(listSnail(listMatrix));
